@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<!-- This is based on DillingerLee's great template here:
+https://github.com/Team-Code/KA_Offline -->
+<html> 
+ <head>
+    <title>Processing.JS inside Webpages: Template</title> 
+</head>
+ <body>
+    <p align="center"> 
+ <!--This draws the Canvas on the webpage -->
+      <canvas id="mycanvas"></canvas> 
+    </p>
+ </body>
+ 
+ <!-- Run all the JavaScript stuff -->
+ <!-- Include the processing.js library -->
+ <!-- See https://khanacademy.zendesk.com/hc/en-us/articles/202260404-What-parts-of-ProcessingJS-does-Khan-Academy-support- for differences -->
+ <script src="https://cdn.jsdelivr.net/processing.js/1.4.8/processing.min.js"></script> 
+ 
+ <script>
+    var sketchProc = function(processingInstance) {
+     with (processingInstance) {
+        size(700, 500); 
+        frameRate(30);
+  
+  
+  
+        
+        // ProgramCodeGoesHere
+       
+  
+ 
+  
+        background(186, 145, 20); // wooden table
+ellipse(200, 200, 350, 350); // plate
+
+ellipse(200, 200, 300, 300); 
+
+ellipse(267,200,120,120);
+ellipse(178,200,120,120);
+ellipse(200,129,120,120);
+fill(237, 245, 5);
+
+
+ellipse(174,207,40,40);
+ellipse(197,131,40,40);
+ellipse(264,198,40,40);
+
+fill(219, 109, 24);
+rect(101,270,190,20);
+fill(219, 109, 24);
+rect(100,300,190,20);
+  
+    }};
+
+    // Get the canvas that Processing-js will use
+    var canvas = document.getElementById("mycanvas"); 
+    // Pass the function sketchProc (defined in myCode.js) to Processing's constructor.
+    var processingInstance = new Processing(canvas, sketchProc); 
+ </script>
+
+</html>
